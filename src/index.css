@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap");
+
+:root {
+  /* ── Paleta Figma ── */
+  --color-bg: #070d1b;
+  --color-surface: #13213e;
+  --color-blue: #4881ff;
+  --color-purple: #8233cd;
+  --color-sky: #3180ca;
+  --color-yellow: #f0c326;
+  --color-green: #00cc6a;
+  --color-white: #ffffff;
+  --color-gray: #7b7f80;
+
+  /* Aliases */
+  --primary: var(--color-blue);
+  --accent: var(--color-yellow);
+  --danger: var(--color-purple);
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--color-white);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+a {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-yellow);
+}
+
+button {
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-blue);
+  border-radius: 3px;
+}

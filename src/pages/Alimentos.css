@@ -1,0 +1,96 @@
+.alimentos {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+.alimentos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Categorías */
+.categoria-section {
+  margin-bottom: 3.5rem;
+}
+
+.categoria-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.categoria-titulo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.categoria-titulo--blue {
+  color: var(--color-blue);
+}
+.categoria-titulo--yellow {
+  color: var(--color-yellow);
+}
+.categoria-titulo--purple {
+  color: #b06ae8;
+}
+.categoria-titulo--green {
+  color: var(--color-green);
+}
+
+.categoria-line {
+  flex: 1;
+  height: 1px;
+  border-radius: 2px;
+}
+
+.categoria-line--blue {
+  background: rgba(72, 129, 255, 0.25);
+}
+.categoria-line--yellow {
+  background: rgba(240, 195, 38, 0.25);
+}
+.categoria-line--purple {
+  background: rgba(130, 51, 205, 0.25);
+}
+.categoria-line--green {
+  background: rgba(0, 204, 106, 0.25);
+}
+
+/* Food grid */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .alimentos {
+    padding: 2rem 1.25rem 3rem;
+  }
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+  }
+  .categoria-titulo {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    

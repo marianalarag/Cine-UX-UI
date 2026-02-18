@@ -1,0 +1,163 @@
+.detalle {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+}
+
+.detalle-back {
+  background: none;
+  border: none;
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+  font-family: "Nunito", sans-serif;
+}
+
+.detalle-back:hover {
+  color: var(--color-yellow);
+}
+
+.detalle-hero {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.detalle-poster {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+.detalle-poster img {
+  width: 100%;
+  display: block;
+}
+
+.detalle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.detalle-genre {
+  display: inline-block;
+  background: rgba(72, 129, 255, 0.2);
+  color: var(--color-blue);
+  border: 1px solid rgba(72, 129, 255, 0.3);
+  padding: 0.25rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+.detalle-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-white);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.detalle-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-gray);
+  font-size: 0.95rem;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.detalle-rating {
+  color: var(--color-yellow);
+}
+.detalle-sep {
+  color: var(--color-gray);
+}
+
+.detalle-synopsis {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+/* Horarios */
+.detalle-horarios h4 {
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.horarios-grid {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.horario-btn {
+  background: var(--color-surface);
+  border: 1px solid rgba(72, 129, 255, 0.25);
+  color: var(--color-white);
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Nunito", sans-serif;
+}
+
+.horario-btn:hover {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+}
+
+.detalle-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.detalle-actions .custom-button {
+  width: auto;
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detalle-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-poster {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .detalle-actions {
+    flex-direction: column;
+  }
+  .detalle-actions .custom-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalle {
+    padding: 2rem 1.25rem 3rem;
+  }
+}

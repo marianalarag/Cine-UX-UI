@@ -1,0 +1,75 @@
+.custom-button {
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  letter-spacing: 0.3px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.custom-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.custom-button:active { transform: translateY(0); }
+
+.custom-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Variantes con paleta Figma ── */
+.custom-button--primary {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+.custom-button--primary:hover { background: #3a6fe0; }
+
+.custom-button--secondary {
+  background: var(--color-surface);
+  color: var(--color-white);
+  border: 1px solid var(--color-blue);
+}
+.custom-button--secondary:hover {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+}
+
+.custom-button--accent {
+  background: var(--color-yellow);
+  color: var(--color-bg);
+}
+.custom-button--accent:hover { background: #d9ae1e; }
+
+.custom-button--outline {
+  background: transparent;
+  color: var(--color-yellow);
+  border: 2px solid var(--color-yellow);
+}
+.custom-button--outline:hover {
+  background: var(--color-yellow);
+  color: var(--color-bg);
+}
+
+.custom-button--success {
+  background: var(--color-green);
+  color: var(--color-bg);
+}
+.custom-button--success:hover { background: #00a857; }
+
+.custom-button--purple {
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+.custom-button--purple:hover { background: #6e29b0; }
+
+.button-icon { font-size: 1.1rem; }

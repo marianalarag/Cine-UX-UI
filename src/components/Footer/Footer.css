@@ -1,0 +1,81 @@
+.footer {
+  background: var(--color-surface);
+  border-top: 1px solid rgba(72,129,255,0.15);
+  margin-top: 2rem;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--color-white);
+}
+
+.footer-logo span { color: var(--color-yellow); }
+
+.footer-brand p {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.footer-links h5 {
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links ul li {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-links ul li:hover { color: var(--color-blue); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  text-align: center;
+  padding: 1.25rem 2rem;
+}
+
+.footer-bottom p {
+  color: var(--color-gray);
+  font-size: 0.82rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+}

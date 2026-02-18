@@ -1,0 +1,95 @@
+.cartelera {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+.cartelera-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.page-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--color-white);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  color: var(--color-gray);
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background: var(--color-surface);
+  border: 1px solid rgba(72, 129, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Nunito", sans-serif;
+}
+
+.filtro-btn:hover {
+  border-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.filtro-btn--active {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+/* Grid */
+.cartelera-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-gray);
+}
+
+.empty-state span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+.empty-state p {
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cartelera-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .cartelera {
+    padding: 2rem 1.25rem 3rem;
+  }
+  .cartelera-grid {
+    grid-template-columns: 1fr;
+  }
+}
