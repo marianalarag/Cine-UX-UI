@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CartProvider } from "./context/CartContext";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -13,23 +14,21 @@ function App() {
   const [vistaActual, setVistaActual] = useState("home");
 
   return (
-    <div
-      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
-    >
-      <Header cambiarVista={setVistaActual} vistaActual={vistaActual} />
+    <CartProvider>
+      <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+        <Header cambiarVista={setVistaActual} vistaActual={vistaActual} />
 
-      <div style={{ flex: 1 }}>
-        {vistaActual === "home" && <Home cambiarVista={setVistaActual} />}
-        {vistaActual === "cartelera" && (
-          <Cartelera cambiarVista={setVistaActual} />
-        )}
-        {vistaActual === "alimentos" && <Alimentos />}
-        {vistaActual === "otros" && <Otros />}
-        {vistaActual === "detalle" && <Detalle cambiarVista={setVistaActual} />}
+        <div style={{ flex: 1 }}>
+          {vistaActual === "home"       && <Home       cambiarVista={setVistaActual} />}
+          {vistaActual === "cartelera"  && <Cartelera  cambiarVista={setVistaActual} />}
+          {vistaActual === "alimentos"  && <Alimentos  />}
+          {vistaActual === "otros"      && <Otros      />}
+          {vistaActual === "detalle"    && <Detalle    cambiarVista={setVistaActual} />}
+        </div>
+
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
+    </CartProvider>
   );
 }
 

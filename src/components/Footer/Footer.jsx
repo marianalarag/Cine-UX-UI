@@ -8,7 +8,6 @@ function Footer() {
           <span className="footer-logo">
             Ciné<span>polis</span>
           </span>
-          <p>La mejor experiencia cinematográfica de México desde 1971.</p>
         </div>
         <div className="footer-links">
           <h5>Navegación</h5>

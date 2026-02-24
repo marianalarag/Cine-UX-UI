@@ -1,7 +1,9 @@
 import Button from "../Button/Button";
+import { useCart } from "../../context/CartContext";
 import "./MovieCard.css";
 
 function MovieCard({
+  id,
   title,
   image,
   genre,
@@ -10,6 +12,9 @@ function MovieCard({
   onVerDetalle,
   onComprar,
 }) {
+  const { toggleFavorito, esFavorito } = useCart();
+  const isFav = esFavorito(id);
+
   return (
     <div className="movie-card">
       <div className="movie-image" onClick={onVerDetalle}>
@@ -25,13 +30,22 @@ function MovieCard({
       </div>
 
       <div className="movie-content">
-        <h3 className="movie-title">{title}</h3>
+        <div className="movie-header-row">
+          <h3 className="movie-title">{title}</h3>
+          <button
+            className={`favorite-btn ${isFav ? "favorite-btn--active" : ""}`}
+            onClick={() => toggleFavorito(id)}
+            aria-label={isFav ? "Quitar de favoritos" : "Agregar a favoritos"}
+          >
+            {isFav ? "❤️" : "🤍"}
+          </button>
+        </div>
 
         <div className="movie-details">
           {genre && (
             <span className="movie-badge movie-badge--genre">{genre}</span>
           )}
-          {duration && <span className="movie-meta"> {duration}</span>}
+          {duration && <span className="movie-meta">🕐 {duration}</span>}
         </div>
 
         <div className="movie-actions">

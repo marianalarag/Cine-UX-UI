@@ -1,4 +1,7 @@
+import { useState } from "react";
 import Button from "../components/Button/Button";
+import CompraForm from "../components/CompraForm/CompraForm";
+import { useCart } from "../context/CartContext";
 import "./Detalle.css";
 
 const INFO_PELICULAS = {
@@ -49,7 +52,10 @@ const INFO_PELICULAS = {
 };
 
 function Detalle({ peliculaId = 1, cambiarVista }) {
+  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+  const { toggleFavorito, esFavorito } = useCart();
   const pelicula = INFO_PELICULAS[peliculaId];
+  const isFav = esFavorito(peliculaId);
 
   if (!pelicula) {
     return (
@@ -104,11 +110,27 @@ function Detalle({ peliculaId = 1, cambiarVista }) {
           </div>
 
           <div className="detalle-actions">
-            <Button text="🎟️ Comprar Boletos" variant="accent" />
-            <Button text="Agregar a favoritos ♡" variant="secondary" />
+            <Button 
+              text="🎟️ Comprar Boletos" 
+              variant="accent"
+              onClick={() => setMostrarFormulario(true)}
+            />
+            <Button 
+              text={isFav ? "❤️ En favoritos" : "🤍 Agregar a favoritos"}
+              variant="secondary"
+              onClick={() => toggleFavorito(peliculaId)}
+            />
           </div>
         </div>
       </div>
+
+      {/* Formulario de compra (onSubmit) */}
+      {mostrarFormulario && (
+        <CompraForm 
+          pelicula={pelicula.title}
+          onCerrar={() => setMostrarFormulario(false)}
+        />
+      )}
     </main>
   );
 }

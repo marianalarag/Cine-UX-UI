@@ -1,4 +1,5 @@
 import FoodCard from "../components/FoodCard/FoodCard";
+import CarritoWidget from "../components/CarritoWidget/CarritoWidget";
 import "./Alimentos.css";
 
 const CATEGORIAS = [
@@ -8,29 +9,38 @@ const CATEGORIAS = [
     color: "blue",
     items: [
       {
+        id: "bebida-1",
         name: "Refresco Grande",
-        description:
-          "Coca-Cola, Pepsi, Fanta o Sprite. Vaso de 40oz. Incluye libre servicio de refresco.",
+        description: "Coca-Cola, Pepsi, Fanta o Sprite. Vaso de 40oz. Incluye libre servicio de refresco.",
         price: "69",
         emoji: "🥤",
         tag: "Bebidas",
         tagColor: "blue",
       },
       {
-        name: "Refresco Mediano",
-        description:
-          "Coca-Cola, Pepsi, Fanta o Sprite. Vaso de 30oz. Incluye libre servicio de refresco.",
-        price: "69",
-        emoji: "🥤",
+        id: "bebida-2",
+        name: "Agua Fresca",
+        description: "Agua de Jamaica, Horchata o Limón. Tamaño mediano, preparada con los mejores ingredientes.",
+        price: "49",
+        emoji: "🫙",
         tag: "Bebidas",
         tagColor: "blue",
       },
       {
-        name: "Refresco Chico",
-        description:
-          "Coca-Cola, Pepsi, Fanta o Sprite. Vaso de 20oz. Incluye libre servicio de refresco.",
-        price: "69",
-        emoji: "🥤",
+        id: "bebida-3",
+        name: "Cerveza Artesanal",
+        description: "Selección de cervezas artesanales nacionales. Disponible en salas para mayores de edad.",
+        price: "95",
+        emoji: "🍺",
+        tag: "Bebidas",
+        tagColor: "blue",
+      },
+      {
+        id: "bebida-4",
+        name: "Café Americano",
+        description: "Café de altura 100% mexicano. Presentación caliente o fría sobre hielo.",
+        price: "59",
+        emoji: "☕",
         tag: "Bebidas",
         tagColor: "blue",
       },
@@ -42,29 +52,38 @@ const CATEGORIAS = [
     color: "yellow",
     items: [
       {
+        id: "comestible-1",
         name: "Hot Dog Clásico",
-        description:
-          "Salchicha de pavo en pan tostado con mostaza, ketchup y cebolla caramelizada.",
+        description: "Salchicha de pavo en pan tostado con mostaza, ketchup y cebolla caramelizada.",
         price: "79",
         emoji: "🌭",
         tag: "Comestibles",
         tagColor: "yellow",
       },
       {
+        id: "comestible-2",
         name: "Nachos con Queso",
-        description:
-          "Totopos crujientes bañados en queso cheddar fundido. Con jalapeños y guacamole.",
+        description: "Totopos crujientes bañados en queso cheddar fundido. Con jalapeños y guacamole.",
         price: "89",
         emoji: "🧀",
         tag: "Comestibles",
         tagColor: "yellow",
       },
       {
+        id: "comestible-3",
         name: "Pizza Personal",
-        description:
-          "Pizza de 8 pulgadas con mozzarella y tus ingredientes favoritos. ¡Recién horneada!",
+        description: "Pizza de 8 pulgadas con mozzarella y tus ingredientes favoritos. ¡Recién horneada!",
         price: "129",
         emoji: "🍕",
+        tag: "Comestibles",
+        tagColor: "yellow",
+      },
+      {
+        id: "comestible-4",
+        name: "Combo Hamburguesa",
+        description: "Mini hamburguesa de res con queso, lechuga y tomate. Incluye papas y refresco pequeño.",
+        price: "149",
+        emoji: "🍔",
         tag: "Comestibles",
         tagColor: "yellow",
       },
@@ -76,36 +95,36 @@ const CATEGORIAS = [
     color: "purple",
     items: [
       {
+        id: "snack-1",
         name: "Palomitas de Maíz",
-        description:
-          "Palomitas recién hechas en sabores: natural, mantequilla extra, chile y limón o caramelo.",
+        description: "Palomitas recién hechas en sabores: natural, mantequilla extra, chile y limón o caramelo.",
         price: "79",
         emoji: "🍿",
         tag: "Snacks",
         tagColor: "purple",
       },
       {
+        id: "snack-2",
         name: "Gummies Surtidos",
-        description:
-          "Mix de gomitas de ositos, serpientes y ácidas. Bolsa de 200g para compartir.",
+        description: "Mix de gomitas de ositos, serpientes y ácidas. Bolsa de 200g para compartir.",
         price: "55",
         emoji: "🍬",
         tag: "Dulces",
         tagColor: "purple",
       },
       {
+        id: "snack-3",
         name: "Chocolate Premium",
-        description:
-          "Tableta de chocolate belga 70% cacao. Opciones: amargo, leche o blanco con frutos secos.",
+        description: "Tableta de chocolate belga 70% cacao. Opciones: amargo, leche o blanco con frutos secos.",
         price: "69",
         emoji: "🍫",
         tag: "Dulces",
         tagColor: "purple",
       },
       {
+        id: "snack-4",
         name: "Pretzels & Dip",
-        description:
-          "Pretzels salados con salsa de queso cheddar o mantequilla de maní. Perfecto para compartir.",
+        description: "Pretzels salados con salsa de queso cheddar o mantequilla de maní. Perfecto para compartir.",
         price: "65",
         emoji: "🥨",
         tag: "Snacks",
@@ -119,10 +138,8 @@ function Alimentos() {
   return (
     <main className="alimentos">
       <div className="alimentos-header">
-        <h2 className="page-title">Alimentos</h2>
-        <p className="page-subtitle">
-          Disfruta lo mejor de nuestra selección gastronómica
-        </p>
+        <h2 className="page-title">🍿 Alimentos</h2>
+        <p className="page-subtitle">Disfruta lo mejor de nuestra selección gastronómica</p>
       </div>
 
       {CATEGORIAS.map((cat) => (
@@ -135,11 +152,13 @@ function Alimentos() {
           </div>
           <div className="food-grid">
             {cat.items.map((item) => (
-              <FoodCard key={item.name} {...item} />
+              <FoodCard key={item.id} {...item} />
             ))}
           </div>
         </section>
       ))}
+
+      <CarritoWidget />
     </main>
   );
 }
