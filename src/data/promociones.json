@@ -1,0 +1,161 @@
+{
+  "promociones": [
+    {
+      "id": 1,
+      "titulo": "Club Cinépolis®",
+      "descripcion": "Es el club de todos. Disfruta beneficios exclusivos.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/clubCinepolis/Es/club_cinepolis.jpg",
+      "categoria": "club",
+      "colorFondo": "#08285b",
+      "precio": "Gratis",
+      "vigencia": "Siempre",
+      "beneficios": [
+        "Acumula puntos",
+        "Descuentos exclusivos",
+        "Promociones especiales"
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Vive la pasión con Coca-Cola",
+      "descripcion": "Participa por boletos dobles al Mundial FIFA 2026 y entradas para ver el Trofeo. Exclusivo en Cinépolis.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/CocaColaMundialFIFA2026/Es/nav_bar_coca_1.jpg",
+      "categoria": "club",
+      "colorFondo": "#08285b",
+      "precio": "Participa",
+      "vigencia": "Hasta 31/12/2024",
+      "beneficios": ["Boletos dobles", "Experiencia exclusiva", "Sorteos"]
+    },
+    {
+      "id": 3,
+      "titulo": "Acumula puntos",
+      "descripcion": "Acumula el 10% de tu compra en puntos, puedes cambiarlos por tus productos favoritos.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/acumulaPuntos/Es/puntos.jpg",
+      "categoria": "club",
+      "colorFondo": "#08285b",
+      "precio": "10%",
+      "vigencia": "Siempre",
+      "beneficios": ["1 punto = $1", "Canje en dulcería", "Canje en boletos"]
+    },
+    {
+      "id": 4,
+      "titulo": "Cinefila",
+      "descripcion": "Fila preferencial en Dulcería.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/cinefila/Es/cinefila.jpg",
+      "categoria": "club",
+      "colorFondo": "#08285b",
+      "precio": "Exclusivo",
+      "vigencia": "Siempre",
+      "beneficios": ["Sin filas", "Atención prioritaria", "Acceso rápido"]
+    },
+    {
+      "id": 5,
+      "titulo": "Combo Lunes",
+      "descripcion": "Dos entradas, unas palomitas jumbo/grande de mantequilla y refresco jumbo/grande.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/comboLunes/Es/combo_lunes.jpg",
+      "categoria": "combos",
+      "colorFondo": "#08285b",
+      "precio": "Desde $299",
+      "vigencia": "Todos los lunes",
+      "beneficios": ["2 boletos", "Palomitas jumbo", "Refresco grande"]
+    },
+    {
+      "id": 6,
+      "titulo": "Cumpleaños",
+      "descripcion": "2X1 en entradas, palomitas jumbo y refrescos grandes, todo el mes de tu cumpleaños.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/cumple/Es/cumpleanos.jpg",
+      "categoria": "club",
+      "colorFondo": "#08285b",
+      "precio": "2x1",
+      "vigencia": "Mes de cumpleaños",
+      "beneficios": ["2x1 en boletos", "2x1 en palomitas", "2x1 en refrescos"]
+    },
+    {
+      "id": 7,
+      "titulo": "Martes 2x1",
+      "descripcion": "Adquiérelo en taquilla para TODOS los formatos participantes.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/martes2x1/Es/martes_2x1.jpg",
+      "categoria": "combos",
+      "colorFondo": "#08285b",
+      "precio": "2x1",
+      "vigencia": "Todos los martes",
+      "beneficios": ["2D", "3D", "VIP", "Macro XE"]
+    },
+    {
+      "id": 8,
+      "titulo": "Combo Dúo",
+      "descripcion": "2 refrescos medianos + 1 palomitas grandes por solo $199.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/combos/duo.jpg",
+      "categoria": "alimentos",
+      "colorFondo": "#8B4513",
+      "precio": "$199",
+      "vigencia": "Hasta agotar",
+      "beneficios": ["2 refrescos", "Palomitas grandes", "Ahorro 30%"]
+    },
+    {
+      "id": 9,
+      "titulo": "Paga Menos",
+      "descripcion": "En formatos como 3D, 2D y Cinépolis VIP®.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/PagaMenos/Es/paga_menos.jpg",
+      "categoria": "bancarios",
+      "colorFondo": "#08285b",
+      "precio": "Hasta 30%",
+      "vigencia": "Todos los días",
+      "beneficios": ["Descuento en 3D", "Descuento en VIP", "Descuento en 2D"]
+    },
+    {
+      "id": 10,
+      "titulo": "Precio Especial",
+      "descripcion": "En formatos como 3D, 2D y Cinépolis VIP®.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/PrecioEspecial/Es/precio_especial.jpg",
+      "categoria": "bancarios",
+      "colorFondo": "#08285b",
+      "precio": "Especial",
+      "vigencia": "Todos los días",
+      "beneficios": [
+        "Tarjetas participantes",
+        "Descuento exclusivo",
+        "Sin mínimo"
+      ]
+    },
+    {
+      "id": 11,
+      "titulo": "Promociones",
+      "descripcion": "Recibe mails con invitaciones para retos, donde podrás ganar puntos y descuentos especiales.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/Promociones/Es/promociones.jpg",
+      "categoria": "club",
+      "colorFondo": "#08285b",
+      "precio": "Gana puntos",
+      "vigencia": "Siempre",
+      "beneficios": ["Retos semanales", "Descuentos exclusivos", "Puntos extra"]
+    },
+    {
+      "id": 12,
+      "titulo": "Puntos",
+      "descripcion": "1 punto = $1 peso, puedes cambiarlos por tus productos favoritos.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/Puntos/Es/puntos.jpg",
+      "categoria": "club",
+      "colorFondo": "#08285b",
+      "precio": "Acumula",
+      "vigencia": "Siempre",
+      "beneficios": ["Canje en taquilla", "Canje en dulcería", "Canje en línea"]
+    },
+    {
+      "id": 13,
+      "titulo": "Refill",
+      "descripcion": "A precio especial en palomitas y refresco.",
+      "imagen": "https://pimcore-content.cinepolis.com/assets/Mexico/NavBars/Promos/ClubCinepolis/Refill/Es/refill.jpg",
+      "categoria": "alimentos",
+      "colorFondo": "#08285b",
+      "precio": "Especial",
+      "vigencia": "Todos los días",
+      "beneficios": ["Refill palomitas", "Refill refresco", "Ahorro en combos"]
+    }
+  ],
+  "categorias": [
+    { "id": "club", "nombre": "Club Cinépolis®" },
+    { "id": "bancarios", "nombre": "Bancarios" },
+    { "id": "alimentos", "nombre": "Alimentos" },
+    { "id": "combos", "nombre": "Combos" }
+  ]
+}

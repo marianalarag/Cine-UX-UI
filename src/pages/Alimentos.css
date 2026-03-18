@@ -1,96 +1,130 @@
+/* src/pages/Alimentos/Alimentos.css */
+
 .alimentos {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 3rem 2rem 4rem;
+  padding: 2rem;
 }
 
 .alimentos-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.page-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  color: var(--color-white);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  color: var(--color-gray);
+  font-size: 1rem;
 }
 
 /* Categorías */
 .categoria-section {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 .categoria-header {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
 .categoria-titulo {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 1.7rem;
-  letter-spacing: 1.5px;
-  white-space: nowrap;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
   margin: 0;
+  white-space: nowrap;
 }
 
-.categoria-titulo--blue {
-  color: var(--color-blue);
+.categoria-titulo--red {
+  color: #f44336;
 }
 .categoria-titulo--yellow {
-  color: var(--color-yellow);
+  color: #ffc107;
+}
+.categoria-titulo--blue {
+  color: #2196f3;
+}
+.categoria-titulo--orange {
+  color: #ff9800;
 }
 .categoria-titulo--purple {
-  color: #b06ae8;
+  color: #9c27b0;
 }
-.categoria-titulo--green {
-  color: var(--color-green);
+.categoria-titulo--brown {
+  color: #8b4513;
+}
+.categoria-titulo--pink {
+  color: #e91e63;
+}
+.categoria-titulo--cyan {
+  color: #00bcd4;
 }
 
 .categoria-line {
   flex: 1;
-  height: 1px;
+  height: 2px;
   border-radius: 2px;
 }
 
-.categoria-line--blue {
-  background: rgba(72, 129, 255, 0.25);
+.categoria-line--red {
+  background: linear-gradient(90deg, #f44336 0%, #ff8a80 100%);
 }
 .categoria-line--yellow {
-  background: rgba(240, 195, 38, 0.25);
+  background: linear-gradient(90deg, #ffc107 0%, #ffe082 100%);
+}
+.categoria-line--blue {
+  background: linear-gradient(90deg, #2196f3 0%, #90caf9 100%);
+}
+.categoria-line--orange {
+  background: linear-gradient(90deg, #ff9800 0%, #ffb74d 100%);
 }
 .categoria-line--purple {
-  background: rgba(130, 51, 205, 0.25);
+  background: linear-gradient(90deg, #9c27b0 0%, #ce93d8 100%);
 }
-.categoria-line--green {
-  background: rgba(0, 204, 106, 0.25);
+.categoria-line--brown {
+  background: linear-gradient(90deg, #8b4513 0%, #b85e1a 100%);
+}
+.categoria-line--pink {
+  background: linear-gradient(90deg, #e91e63 0%, #f48fb1 100%);
+}
+.categoria-line--cyan {
+  background: linear-gradient(90deg, #00bcd4 0%, #80deea 100%);
 }
 
-/* Food grid */
+/* Grid de alimentos */
 .food-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .food-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   .alimentos {
-    padding: 2rem 1.25rem 3rem;
+    padding: 1rem;
   }
+
   .food-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
   }
+
   .categoria-titulo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .food-grid {
     grid-template-columns: 1fr;
   }
 }
-    

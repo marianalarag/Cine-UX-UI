@@ -1,142 +1,209 @@
+/* src/components/FoodCard/FoodCard.css */
+
 .food-card {
   background: var(--color-surface);
-  border: 1px solid rgba(72,129,255,0.15);
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(72, 129, 255, 0.15);
+  position: relative;
 }
 
 .food-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
-  border-color: rgba(72,129,255,0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: rgba(72, 129, 255, 0.35);
 }
 
-/* Emoji area */
-.food-card__emoji {
-  height: 110px;
+.food-card__image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a2639 0%, #0f1a2f 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.5rem;
-  flex-shrink: 0;
 }
 
-.food-card__emoji--blue    { background: rgba(72,129,255,0.12); }
-.food-card__emoji--green   { background: rgba(0,204,106,0.12); }
-.food-card__emoji--yellow  { background: rgba(240,195,38,0.12); }
-.food-card__emoji--purple  { background: rgba(130,51,205,0.12); }
-
-/* Body */
-.food-card__body {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  flex: 1;
+.food-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Todas las imágenes se comportan igual */
+  transition: transform 0.5s ease;
+  display: block;
 }
 
-/* Tag */
+/* Eliminamos la clase especial --contain */
+
+.food-card:hover .food-card__image {
+  transform: scale(1.05);
+}
+
 .food-card__tag {
-  display: inline-block;
-  padding: 0.2rem 0.65rem;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.7rem;
-  font-weight: 800;
+  font-weight: 700;
+  color: white;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  width: fit-content;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  backdrop-filter: blur(2px);
 }
 
 .food-card__tag--blue {
-  background: rgba(72,129,255,0.18);
-  color: var(--color-blue);
-  border: 1px solid rgba(72,129,255,0.3);
+  background: linear-gradient(135deg, #2196f3, #1976d2);
 }
-
-.food-card__tag--green {
-  background: rgba(0,204,106,0.18);
-  color: var(--color-green);
-  border: 1px solid rgba(0,204,106,0.3);
-}
-
 .food-card__tag--yellow {
-  background: rgba(240,195,38,0.18);
-  color: var(--color-yellow);
-  border: 1px solid rgba(240,195,38,0.3);
+  background: linear-gradient(135deg, #ffc107, #ffb300);
+  color: #333;
+}
+.food-card__tag--purple {
+  background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+}
+.food-card__tag--orange {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+.food-card__tag--red {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+}
+.food-card__tag--brown {
+  background: linear-gradient(135deg, #8b4513, #5d3a1a);
+}
+.food-card__tag--pink {
+  background: linear-gradient(135deg, #e91e63, #c2185b);
+}
+.food-card__tag--cyan {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
 }
 
-.food-card__tag--purple {
-  background: rgba(130,51,205,0.18);
-  color: var(--color-purple);
-  border: 1px solid rgba(130,51,205,0.3);
+.food-card__body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: var(--color-surface);
 }
 
 .food-card__name {
-  font-size: 1rem;
-  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--color-white);
-  margin: 0;
+  line-height: 1.3;
 }
 
 .food-card__desc {
-  font-size: 0.82rem;
+  margin: 0 0 1rem 0;
+  font-size: 0.85rem;
   color: var(--color-gray);
   line-height: 1.5;
   flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .food-card__footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .food-card__price {
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--color-yellow);
 }
 
 .food-card__quantity {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .quantity-label {
   font-size: 0.8rem;
-  font-weight: 700;
   color: var(--color-gray);
+  font-weight: 500;
 }
 
 .quantity-input {
-  width: 50px;
-  padding: 0.3rem 0.4rem;
-  border: 1px solid rgba(72,129,255,0.3);
+  width: 60px;
+  padding: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
-  background: rgba(19,33,62,0.5);
-  color: var(--color-white);
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.9rem;
   text-align: center;
-  font-family: 'Nunito', sans-serif;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-white);
 }
 
 .quantity-input:focus {
   outline: none;
   border-color: var(--color-blue);
+  box-shadow: 0 0 0 2px rgba(72, 129, 255, 0.2);
 }
 
-.food-card__footer .custom-button {
-  padding: 0.45rem 1rem;
-  font-size: 0.82rem;
-  flex: none;
+/* Botón personalizado dentro de FoodCard */
+.food-card .custom-button {
   width: 100%;
-  margin-top: 0.5rem;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+  background: linear-gradient(135deg, var(--color-blue), #2b4d99);
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.food-card .custom-button:hover {
+  background: linear-gradient(135deg, var(--color-yellow), #e6b422);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+}
+
+.food-card .custom-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .food-card__image-container {
+    height: 180px;
+  }
+
+  .food-card__name {
+    font-size: 1rem;
+  }
+
+  .food-card__desc {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .food-card__price {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-card__image-container {
+    height: 200px;
+  }
 }

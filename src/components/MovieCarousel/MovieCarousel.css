@@ -1,0 +1,28 @@
+.movie-carousel {
+  padding: 20px 0;
+}
+
+.movie-carousel :global(.swiper-button-next),
+.movie-carousel :global(.swiper-button-prev) {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.movie-carousel :global(.swiper-button-next:hover),
+.movie-carousel :global(.swiper-button-prev:hover) {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.movie-carousel :global(.swiper-button-next::after),
+.movie-carousel :global(.swiper-button-prev::after) {
+  font-size: 18px;
+}

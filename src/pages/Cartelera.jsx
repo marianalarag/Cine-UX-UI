@@ -1,16 +1,26 @@
 // src/pages/Cartelera/Cartelera.jsx
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MovieCard from "../components/MovieCard/MovieCard";
 import { PELICULAS_CARTELERA, FILTROS } from "../data/Peliculas";
 import "./Cartelera.css";
 
-function Cartelera({ cambiarVista }) {
+function Cartelera() {
   const [filtro, setFiltro] = useState("Todos");
+  const navigate = useNavigate();
 
   const peliculasFiltradas =
     filtro === "Todos"
       ? PELICULAS_CARTELERA
       : PELICULAS_CARTELERA.filter((p) => p.genre === filtro);
+
+  const handleVerDetalle = (peliculaId) => {
+    navigate(`/pelicula/${peliculaId}`);
+  };
+
+  const handleComprar = (peliculaId) => {
+    navigate(`/pelicula/${peliculaId}`);
+  };
 
   return (
     <main className="cartelera">
@@ -40,8 +50,8 @@ function Cartelera({ cambiarVista }) {
           <MovieCard
             key={pelicula.id}
             {...pelicula}
-            onVerDetalle={() => cambiarVista("detalle")}
-            onComprar={() => cambiarVista("detalle")}
+            onVerDetalle={() => handleVerDetalle(pelicula.id)}
+            onComprar={() => handleComprar(pelicula.id)}
           />
         ))}
       </div>
