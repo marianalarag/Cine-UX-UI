@@ -1,18 +1,11 @@
 // src/App.jsx
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CarritoWidget from "./components/CarritoWidget/CarritoWidget";
-
-import Home from "./pages/Home";
-import Cartelera from "./pages/Cartelera";
-import Alimentos from "./pages/Alimentos";
-import Otros from "./pages/Otros";
-import Detalle from "./pages/Detalle";
-import NotFound from "./pages/NotFound";
+import AppRouter from "./routes/AppRouter";
 
 function App() {
   const [carritoAbierto, setCarritoAbierto] = useState(false);
@@ -33,14 +26,7 @@ function App() {
         />
 
         <div style={{ flex: 1 }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cartelera" element={<Cartelera />} />
-            <Route path="/alimentos" element={<Alimentos />} />
-            <Route path="/otros" element={<Otros />} />
-            <Route path="/pelicula/:id" element={<Detalle />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <AppRouter />
         </div>
 
         {/* CarritoWidget con control externo */}
